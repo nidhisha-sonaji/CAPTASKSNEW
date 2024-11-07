@@ -1,0 +1,33 @@
+### get metadata
+http://localhost:4004/odata/v4/MainService/$metadata
+
+### get request header
+http://localhost:4004/odata/v4/MainService/ReqHeaderSet
+
+
+
+
+### get status
+http://localhost:4004/odata/v4/MainService/StatusSet
+
+
+### get header and item together
+http://localhost:4004/odata/v4/MainService/ReqHeaderSet/136e855d-e862-404a-96bd-a7cfe4311b5a?$expand=items
+
+
+###
+POST http://localhost:4004/odata/v4/MainService/ReqHeaderSet
+Content-Type: application/json
+
+{
+    "requestDesc": "Trying new record",
+    "status_statusId":"Ordered",
+    "totalPrice": "100.00"
+
+}
+
+
+###
+http://localhost:4004/odata/v4/MainService/ReqHeaderSet/fde12049-09cf-445d-860f-2a24f0393d45?$expand=items
+
+
