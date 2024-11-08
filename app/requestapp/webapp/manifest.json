@@ -13,11 +13,11 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.15.3",
-      "toolsId": "ef98ba7b-f794-4da3-b714-dde5663d094b"
+      "toolsId": "7ef183cc-b529-4b6b-be99-7b76272b046c"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v4/MainService/",
+        "uri": "/odata/v4/main/",
         "type": "OData",
         "settings": {
           "annotations": [],

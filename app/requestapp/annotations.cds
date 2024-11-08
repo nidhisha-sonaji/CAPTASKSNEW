@@ -1,5 +1,5 @@
 using MainService as service from '../../srv/MainService';
-
+ 
 annotate service.ReqHeaderSet with @(
     UI.SelectionFields:[
         requestNo,
@@ -17,7 +17,7 @@ annotate service.ReqHeaderSet with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : status.statusText // Corrected field reference
+            Value : status.statusText
         },
         {
             $Type : 'UI.DataField',

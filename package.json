@@ -10,33 +10,42 @@
     "@sap-cloud-sdk/resilience": "^3.22.2",
     "@sap/cds": "^8",
     "express": "^4",
-    "@cap-js/hana": "^1"
+    "@cap-js/hana": "^1",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.6",
     "@cap-js/sqlite": "^1",
-    "@sap/ux-specification": "UI5-1.130"
+    "@sap/cds-dk": "^8",
+    "@sap/ux-specification": "UI5-1.130",
+    "rimraf": "^5.0.5"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-requestapp": "cds watch --open requestapp/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-requestapp": "cds watch --open requestapp/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy caprequestapp --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
   },
   "cds": {
     "requires": {
       "OP_API_PRODUCT_SRV_0001": {
-        "kind": "odata-v2",
+        "kind": "odata",
         "model": "srv/external/OP_API_PRODUCT_SRV_0001",
         "credentials": {
           "destination": "S4H",
           "path": "/sap/opu/odata/sap/API_PRODUCT_SRV"
         }
-      }
+      },
+      "db": "hana",
+      "auth": "xsuaa"
     },
     "sql": {
       "native_hana_associations": false
     }
   },
   "sapux": [
+    "app/requestapp",
     "app/requestapp",
     "app/requestapp"
   ]

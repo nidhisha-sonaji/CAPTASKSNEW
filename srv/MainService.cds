@@ -1,6 +1,6 @@
 using { caprequestapp.db.transaction } from '../db/datamodel';
 
-service MainService @(path: 'MainService'){
+service MainService {
     entity ReqHeaderSet @(odata.draft.enabled: true) as projection on transaction.reqHeader{
         *,
         items

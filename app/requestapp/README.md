@@ -1,13 +1,13 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu Nov 07 2024 14:35:49 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Fri Nov 08 2024 14:10:41 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.15.3|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local Cap|
-|**Service URL**<br>http://localhost:4004/odata/v4/MainService/|
+|**Service URL**<br>http://localhost:4004/odata/v4/main/|
 |**Module Name**<br>requestapp|
 |**Application Title**<br>My Orders App|
 |**Namespace**<br>caprequestapp.ns|
